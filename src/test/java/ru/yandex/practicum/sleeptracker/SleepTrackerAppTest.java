@@ -9,15 +9,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static ru.yandex.practicum.sleeptracker.Chronotype.GOLUB;
 
 class SleepTrackerAppTest {
-    SleepingSessionCounter counter = new SleepingSessionCounter();
-    MinimalSession minimalSession = new MinimalSession();
-    MaxSession maxSession = new MaxSession();
-    AverageDuration averageDuration = new AverageDuration();
-    ChronotypeFunction chronotypeFunction = new ChronotypeFunction();
-    SleepLessNightSession sleepLessNightSession = new SleepLessNightSession();
-    BadSessionCount badSessionCount = new BadSessionCount();
+    private final SleepingSessionCounter counter = new SleepingSessionCounter();
+    private final MinimalSession minimalSession = new MinimalSession();
+    private final MaxSession maxSession = new MaxSession();
+    private final AverageDuration averageDuration = new AverageDuration();
+    private final ChronotypeFunction chronotypeFunction = new ChronotypeFunction();
+    private final SleepLessNightSession sleepLessNightSession = new SleepLessNightSession();
+    private final BadSessionCount badSessionCount = new BadSessionCount();
 
-    List<SleepingSession> sessions = List.of(
+    private final List<SleepingSession> sessions = List.of(
             new SleepingSession(
                     LocalDateTime.of(2023, 1, 1, 23, 0),
                     LocalDateTime.of(2023, 1, 2, 7, 0),
