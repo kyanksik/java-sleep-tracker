@@ -10,8 +10,8 @@ public class MinimalSession implements Function<List<SleepingSession>, SleepAnal
 
     @Override
     public SleepAnalysisResult apply(List<SleepingSession> sleepingSessions) {
-        Long minMinutes = sleepingSessions.stream().
-                map(session -> ChronoUnit.MINUTES.between(session.start(), session.end()))
+        Long minMinutes = sleepingSessions.stream()
+                .map(session -> ChronoUnit.MINUTES.between(session.start(), session.end()))
                 .min(Long::compareTo)
                 .orElse(0L);
         return new SleepAnalysisResult(TITLE, minMinutes);
