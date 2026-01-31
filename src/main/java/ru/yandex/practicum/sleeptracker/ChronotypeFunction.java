@@ -10,7 +10,7 @@ import static ru.yandex.practicum.sleeptracker.Chronotype.*;
 
 public class ChronotypeFunction implements Function<List<SleepingSession>, SleepAnalysisResult> {
 
-    final static private String TITLE = "Хронотип сна: ";
+    private static final String TITLE = "Хронотип сна: ";
 
     @Override
     public SleepAnalysisResult apply(List<SleepingSession> sessions) {

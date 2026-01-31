@@ -13,8 +13,8 @@ import java.util.function.Function;
 
 public class SleepTrackerApp {
 
-    public final static String SEPARATOR = ";";
-    private final static String SESSIONS_FILE_NAME = "src/main/resources/sleep_log.txt";
+    public static final String SEPARATOR = ";";
+    private static final String SESSIONS_FILE_NAME = "src/main/resources/sleep_log.txt";
     private static final DateTimeFormatter LOG_TIME_FORMATTER =
             DateTimeFormatter.ofPattern("dd.MM.yy HH:mm");
 
