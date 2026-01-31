@@ -47,20 +47,20 @@ public class ChronotypeFunction implements Function<List<SleepingSession>, Sleep
     }
 
     private Chronotype getChronotype(Map<Chronotype, Long> counts) {
-        long SovaCount = counts.getOrDefault(SOVA, 0L);
-        long JavoronokCount = counts.getOrDefault(JAVORONOK, 0L);
-        long GolubCount = counts.getOrDefault(GOLUB, 0L);
+        long sovaCount = counts.getOrDefault(SOVA, 0L);
+        long javoronokCount = counts.getOrDefault(JAVORONOK, 0L);
+        long golubCount = counts.getOrDefault(GOLUB, 0L);
 
-        long maxCount = Math.max(SovaCount, Math.max(JavoronokCount, GolubCount));
+        long maxCount = Math.max(sovaCount, Math.max(javoronokCount, golubCount));
 
-        if ((SovaCount == maxCount && JavoronokCount == maxCount) ||
-                (SovaCount == maxCount && GolubCount == maxCount) ||
-                (JavoronokCount == maxCount && GolubCount == maxCount)) {
+        if ((sovaCount == maxCount && javoronokCount == maxCount) ||
+                (sovaCount == maxCount && golubCount == maxCount) ||
+                (javoronokCount == maxCount && golubCount == maxCount)) {
             return GOLUB;
         }
 
-        return SovaCount == maxCount ? SOVA :
-                JavoronokCount == maxCount ? JAVORONOK :
+        return sovaCount == maxCount ? SOVA :
+                javoronokCount == maxCount ? JAVORONOK :
                         GOLUB;
     }
 }
