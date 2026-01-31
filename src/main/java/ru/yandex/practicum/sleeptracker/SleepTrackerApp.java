@@ -18,7 +18,7 @@ public class SleepTrackerApp {
     private static final DateTimeFormatter LOG_TIME_FORMATTER =
             DateTimeFormatter.ofPattern("dd.MM.yy HH:mm");
 
-    private final List<Function<List<SleepingSession>, SleepAnalysisResult>> ANALYTIC_FUNCTIONS = List.of(
+    private static final List<Function<List<SleepingSession>, SleepAnalysisResult>> ANALYTIC_FUNCTIONS = List.of(
             new SleepingSessionCounter(), new MinimalSession(), new MaxSession(), new AverageDuration(),
             new BadSessionCount(), new SleepLessNightSession(), new ChronotypeFunction());
 
